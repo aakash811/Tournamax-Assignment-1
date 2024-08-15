@@ -11,7 +11,6 @@ const getTopics = async () => {
     }
 
     const data = await res.json();
-    console.log("Fetched topics data:", data);
     return { topics: data.topics || [] };
   } catch (error) {
     console.log("Error loading topics: ", error);

@@ -23,7 +23,7 @@ export default function TopicItem({ topic }) {
   return (
     <div
       key={topic._id}
-      className="p-4 border border-slate-300 my-3 flex justify-between gap-5 items-start"
+      className="p-4 border border-slate-300 my-3 flex justify-between gap-5 items-start rounded-lg shadow-lg"
     >
       <div
         className="w-[70%] relative"
@@ -37,7 +37,6 @@ export default function TopicItem({ topic }) {
           {topic.description}
         </div>
 
-        {/* Popover with tooltip and arrow */}
         {isHovered && isTruncated && (
           <div className="absolute top-full left-0 mt-2 w-full bg-[#1f2937] text-white rounded-lg shadow-lg z-10">
             <div className=" scale-[3] absolute top-[-5px] left-[50%] w-0 h-0 border-l-4 border-r-4 border-b-4 border-transparent border-b-gray-700"></div>
