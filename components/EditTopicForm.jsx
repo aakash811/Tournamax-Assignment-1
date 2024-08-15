@@ -82,7 +82,7 @@ export default function EditTopicForm({ id, title, description }) {
           }`}
           rows={4}
           type="text"
-          placeholder={newDescription}
+          placeholder="Topic Description"
         />
       </div>
       {errors.description && (
