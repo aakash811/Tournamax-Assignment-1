@@ -5,6 +5,12 @@ export default async function TopicsList() {
     try {
       const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/topics`, {
         cache: "no-store",
+        headers: {
+          "Access-Control-Allow-Headers": "Content-Type",
+          "Access-Control-Allow-Origin": "*",
+          "Content-Type": "application/json",
+          "Access-Control-Allow-Methods": "OPTIONS,POST,GET,PATCH",
+        },
       });
 
       if (!res.ok) {
