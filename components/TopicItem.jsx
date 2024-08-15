@@ -2,7 +2,7 @@
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import RemoveBtn from "./RemoveBtn";
-import { HiArrowUp, HiPencilAlt } from "react-icons/hi";
+import { HiPencilAlt } from "react-icons/hi";
 
 export default function TopicItem({ topic }) {
   const [isHovered, setIsHovered] = useState(false);
