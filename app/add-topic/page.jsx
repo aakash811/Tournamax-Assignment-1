@@ -34,7 +34,7 @@ export default function AddTopic() {
     if (hasError) return;
 
     try {
-      const res = await fetch("http://localhost:3000/api/topics", {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/topics`, {
         method: "POST",
         headers: {
           "Content-type": "application/json",

@@ -15,9 +15,12 @@ export default function RemoveBtn({ id }) {
 
   const handleConfirm = async () => {
     setIsModalOpen(false);
-    const res = await fetch(`http://localhost:3000/api/topics?id=${id}`, {
-      method: "DELETE",
-    });
+    const res = await fetch(
+      `${process.env.NEXT_PUBLIC_API_URL}/topics?id=${id}`,
+      {
+        method: "DELETE",
+      }
+    );
 
     if (res.ok) {
       router.refresh();
