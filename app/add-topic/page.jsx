@@ -74,7 +74,7 @@ export default function AddTopic() {
         <textarea
           onChange={(e) => setDescription(e.target.value)}
           value={description}
-          className={`border px-8 py-2 w-full ${
+          className={`border px-8 py-2 w-full max-h-[calc(100vh-52vh)] min-h-14 ${
             errors.description ? "border-red-500" : "border-slate-500"
           }`}
           placeholder="Topic Description"

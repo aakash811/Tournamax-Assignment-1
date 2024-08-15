@@ -4,8 +4,8 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 
 export default function EditTopicForm({ id, title, description }) {
-  const [newTitle, setNewTitle] = useState(title);
-  const [newDescription, setNewDescription] = useState(description);
+  const [newTitle, setNewTitle] = useState("");
+  const [newDescription, setNewDescription] = useState("");
 
   // Error states
   const [errors, setErrors] = useState({ title: "", description: "" });
@@ -77,7 +77,7 @@ export default function EditTopicForm({ id, title, description }) {
         <textarea
           onChange={(e) => setNewDescription(e.target.value)}
           value={newDescription}
-          className={`border px-8 py-2 w-full ${
+          className={`border px-8 py-2 w-full max-h-[calc(100vh-52vh)] min-h-14 ${
             errors.description ? "border-red-500" : "border-slate-500"
           }`}
           rows={4}
