@@ -20,6 +20,9 @@ const getTopics = async () => {
 };
 
 export default async function TopicsList() {
+  if (!process.env.NEXT_PUBLIC_API_URL) {
+    return null;
+  }
   const { topics } = await getTopics();
 
   if (!Array.isArray(topics)) {
