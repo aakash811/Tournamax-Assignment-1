@@ -11,7 +11,7 @@ export async function POST(request) {
 
 export async function GET() {
   await connectMongoDB();
-  const topics = await Topic.find();
+  const topics = await Topic.find().sort({ createdAt: -1 });
   return NextResponse.json({ topics });
 }
 
