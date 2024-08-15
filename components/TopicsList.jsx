@@ -2,7 +2,7 @@ import TopicItem from "./TopicItem";
 
 const getTopics = async () => {
   try {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/topics`, {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/topics`, {
       cache: "no-store",
     });
 

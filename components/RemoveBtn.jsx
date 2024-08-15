@@ -16,7 +16,7 @@ export default function RemoveBtn({ id }) {
   const handleConfirm = async () => {
     setIsModalOpen(false);
     const res = await fetch(
-      `${process.env.NEXT_PUBLIC_API_URL}/topics?id=${id}`,
+      `${process.env.NEXT_PUBLIC_API_URL}/api/topics?id=${id}`,
       {
         method: "DELETE",
       }
