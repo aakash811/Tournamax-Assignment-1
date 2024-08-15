@@ -43,7 +43,7 @@ export default async function TopicsList() {
           return <TopicItem key={_id} topic={topic} />;
         })
       ) : (
-        <p>No topics available</p>
+        <p className="text-center">No topics available</p>
       )}
     </>
   );
